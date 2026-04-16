@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leslie Espinoza Campomanes — Biomedical AI Engineer, Stanford</title>
+<meta name="description" content="Biomedical & software engineer. AI specialist in medicine & health. Indigenous Peruvian woman in Silicon Valley. Stanford University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0e0e0f;
+  --bg2:#161618;
+  --bg3:#1e1e21;
+  --bg4:#252528;
+  --border:rgba(255,255,255,0.08);
+  --border2:rgba(255,255,255,0.14);
+  --text:#f0ede8;
+  --text2:#a09d98;
+  --text3:#6a6762;
+  --gold:#d4a44c;
+  --gold2:#f0c87a;
+  --gold3:#7a5a1e;
+  --teal:#1d9e75;
+  --teal2:#9fe1cb;
+  --teal3:#04342c;
+  --coral:#d85a30;
+  --coral2:#f5c4b3;
+  --r-md:8px;
+  --r-lg:12px;
+  --r-xl:16px;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;border-radius:var(--r-lg);}
+
+/* LANG TOGGLE */
+.lang-hidden{display:none!important;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(14,14,15,0.92);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);padding:0 40px;display:flex;align-items:center;justify-content:space-between;height:60px;}
+.nav-logo{font-size:15px;font-weight:500;color:var(--gold);}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{font-size:13px;color:var(--text2);padding:6px 12px;border-radius:var(--r-md);transition:all 0.15s;}
+.nav-links a:hover{background:var(--bg3);color:var(--text);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.lang-toggle{display:flex;background:var(--bg3);border:0.5px solid var(--border);border-radius:20px;padding:3px;gap:2px;}
+.lang-btn{font-size:12px;font-weight:500;padding:4px 12px;border-radius:16px;border:none;background:transparent;color:var(--text2);cursor:pointer;transition:all 0.15s;}
+.lang-btn.active{background:var(--gold);color:#0e0e0f;}
+.btn-primary{background:var(--gold);color:#0e0e0f;border:none;padding:8px 18px;border-radius:var(--r-md);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s;}
+.btn-primary:hover{background:var(--gold2);}
+.btn-ghost{background:transparent;color:var(--text);border:0.5px solid var(--border2);padding:8px 18px;border-radius:var(--r-md);font-size:13px;cursor:pointer;transition:all 0.15s;}
+.btn-ghost:hover{background:var(--bg3);}
+
+/* HERO */
+.hero-wrap{max-width:1100px;margin:0 auto;padding:80px 40px 60px;display:flex;align-items:center;gap:64px;}
+.hero-text{flex:1;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--text2);border:0.5px solid var(--border2);background:var(--bg3);padding:5px 14px;border-radius:20px;margin-bottom:20px;}
+.hero-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0;}
+.hero-quechua{font-size:13px;color:var(--gold);font-weight:500;letter-spacing:0.05em;margin-bottom:10px;}
+.hero h1{font-size:48px;font-weight:500;line-height:1.1;color:var(--text);margin-bottom:16px;}
+.hero h1 span{color:var(--gold);}
+.hero-mantra{font-size:16px;color:var(--text2);line-height:1.7;margin-bottom:8px;}
+.hero-sub{font-size:13px;color:var(--text3);line-height:1.7;margin-bottom:32px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.hero-social{display:flex;gap:10px;margin-top:24px;}
+.social-btn{width:36px;height:36px;border-radius:var(--r-md);border:0.5px solid var(--border);background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--text2);cursor:pointer;transition:all 0.15s;}
+.social-btn:hover{background:var(--bg3);color:var(--text);}
+.hero-avatar{width:260px;height:260px;border-radius:50%;background:var(--bg3);border:1px solid var(--gold3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:72px;font-weight:500;color:var(--gold);}
+
+/* TRUST */
+.trust-bar{border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);padding:18px 40px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;background:var(--bg2);}
+.trust-label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:0.08em;margin-right:8px;}
+.trust-chip{font-size:12px;font-weight:500;color:var(--text2);padding:5px 14px;border:0.5px solid var(--border);border-radius:var(--r-md);background:var(--bg3);}
+.trust-chip.gold{color:var(--gold);border-color:var(--gold3);}
+
+/* STATS */
+.stats{display:flex;border-bottom:0.5px solid var(--border);background:var(--bg);}
+.stat{flex:1;padding:28px 24px;text-align:center;border-right:0.5px solid var(--border);}
+.stat:last-child{border-right:none;}
+.stat-num{font-size:28px;font-weight:500;color:var(--gold);}
+.stat-label{font-size:12px;color:var(--text3);margin-top:4px;}
+
+/* SECTIONS */
+.section{padding:80px 40px;max-width:1100px;margin:0 auto;}
+.section-divider{border:none;border-top:0.5px solid var(--border);}
+.eyebrow{font-size:12px;font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:12px;}
+.section-title{font-size:32px;font-weight:500;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.section-lead{font-size:15px;color:var(--text2);line-height:1.7;margin-bottom:40px;max-width:600px;}
+
+/* ABOUT */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.bio-p{font-size:14px;color:var(--text2);line-height:1.85;margin-bottom:14px;}
+.bio-p strong{color:var(--text);font-weight:500;}
+.pull-quote{border-left:2px solid var(--gold);padding:10px 0 10px 16px;margin:20px 0;}
+.pull-quote p{font-size:15px;color:var(--text);font-weight:500;line-height:1.5;font-style:italic;margin:0;}
+.pull-quote span{font-size:12px;color:var(--text3);display:block;margin-top:4px;}
+.hcard{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:14px 16px;display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
+.hcard-icon{width:34px;height:34px;border-radius:50%;background:var(--bg3);border:0.5px solid var(--gold3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:500;color:var(--gold);}
+.hcard-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;}
+.hcard-sub{font-size:12px;color:var(--text2);line-height:1.5;}
+
+/* JOURNEY */
+.journey{background:var(--bg2);border-radius:var(--r-lg);padding:20px 24px;margin-top:32px;border:0.5px solid var(--border);}
+.journey-row{display:flex;gap:0;margin-top:14px;flex-wrap:wrap;}
+.journey-step{flex:1;min-width:100px;padding:12px 10px 12px 0;border-right:0.5px solid var(--border);}
+.journey-step:last-child{border-right:none;}
+.journey-year{font-size:11px;font-weight:500;color:var(--gold);margin-bottom:3px;}
+.journey-label{font-size:12px;font-weight:500;color:var(--text);line-height:1.3;}
+.journey-sub{font-size:11px;color:var(--text3);margin-top:2px;line-height:1.4;}
+
+/* RESEARCH */
+.research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+.rcard{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:20px 22px;transition:border-color 0.15s;}
+.rcard:hover{border-color:var(--gold3);}
+.rtag{display:inline-block;font-size:11px;font-weight:500;color:var(--gold);background:rgba(212,164,76,0.12);padding:3px 10px;border-radius:20px;margin-bottom:12px;}
+.rcard h3{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.4;}
+.rcard p{font-size:13px;color:var(--text2);line-height:1.6;}
+
+/* AWARDS */
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+.award-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:22px;transition:border-color 0.15s;}
+.award-card:hover{border-color:var(--gold3);}
+.award-icon{width:42px;height:42px;border-radius:50%;background:rgba(212,164,76,0.1);border:0.5px solid var(--gold3);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:12px;}
+.award-year{font-size:11px;font-weight:500;color:var(--gold);background:rgba(212,164,76,0.1);padding:2px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;}
+.award-card h3{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.4;}
+.award-card p{font-size:13px;color:var(--text2);line-height:1.6;}
+
+/* SOCIAL IMPACT */
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+.icard{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:16px 20px;display:flex;align-items:flex-start;gap:14px;margin-bottom:10px;}
+.icard-icon{width:36px;height:36px;border-radius:var(--r-md);background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.3);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.icard h4{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px;}
+.icard p{font-size:12px;color:var(--text2);line-height:1.5;margin:0;}
+.empowerment-banner{background:linear-gradient(135deg,rgba(212,164,76,0.08),rgba(29,158,117,0.08));border:0.5px solid var(--gold3);border-radius:var(--r-xl);padding:28px 32px;margin-top:40px;text-align:center;}
+.empowerment-banner h3{font-size:20px;font-weight:500;color:var(--gold);margin-bottom:10px;}
+.empowerment-banner p{font-size:14px;color:var(--text2);line-height:1.7;max-width:600px;margin:0 auto;}
+
+/* MEDIA */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.media-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:18px 20px;}
+.media-source{font-size:13px;font-weight:500;color:var(--gold);margin-bottom:6px;}
+.media-headline{font-size:13px;color:var(--text);line-height:1.5;margin-bottom:8px;}
+.media-date{font-size:11px;color:var(--text3);}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+.blog-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);overflow:hidden;transition:border-color 0.15s;}
+.blog-card:hover{border-color:var(--gold3);}
+.blog-img{height:160px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--text3);border-bottom:0.5px solid var(--border);}
+.blog-body{padding:18px 20px;}
+.blog-tag{font-size:11px;font-weight:500;color:var(--teal);background:rgba(29,158,117,0.12);padding:2px 10px;border-radius:20px;display:inline-block;margin-bottom:10px;}
+.blog-card h3{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.4;}
+.blog-card p{font-size:12px;color:var(--text2);line-height:1.6;}
+.blog-meta{font-size:11px;color:var(--text3);margin-top:10px;}
+
+/* CONSULTING */
+.consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+.ccard{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--r-lg);padding:22px;}
+.ccard.featured{border-color:var(--gold);border-width:1px;}
+.feat-badge{font-size:11px;font-weight:500;color:var(--gold);background:rgba(212,164,76,0.15);padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:12px;}
+.ccard h3{font-size:15px;font-weight:500;color:var(--text);margin-bottom:8px;}
+.ccard p{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:14px;}
+.price{font-size:24px;font-weight:500;color:var(--gold);margin-bottom:14px;}
+.ccard ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+.ccard ul li{font-size:13px;color:var(--text2);padding-left:16px;position:relative;}
+.ccard ul li::before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--teal);}
+.book-btn{width:100%;padding:10px;border-radius:var(--r-md);font-size:13px;font-weight:500;cursor:pointer;border:0.5px solid var(--border2);background:transparent;color:var(--text);transition:all 0.15s;}
+.book-btn:hover{background:var(--bg3);}
+.book-btn.primary{background:var(--gold);color:#0e0e0f;border:none;}
+.book-btn.primary:hover{background:var(--gold2);}
+
+/* BOOKING */
+.booking-section{background:var(--bg2);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);}
+.booking-inner{max-width:1100px;margin:0 auto;padding:64px 40px;display:flex;align-items:center;gap:64px;flex-wrap:wrap;}
+.booking-text{flex:1;min-width:260px;}
+.booking-form{flex:1;min-width:260px;}
+.form-row{display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
+.form-input{flex:1;min-width:160px;padding:11px 14px;border:0.5px solid var(--border2);border-radius:var(--r-md);font-size:14px;background:var(--bg3);color:var(--text);outline:none;font-family:'Inter',sans-serif;}
+.form-input:focus{border-color:var(--gold);}
+.form-select{width:100%;padding:11px 14px;border:0.5px solid var(--border2);border-radius:var(--r-md);font-size:14px;background:var(--bg3);color:var(--text);outline:none;font-family:'Inter',sans-serif;margin-bottom:10px;}
+.form-select:focus{border-color:var(--gold);}
+.form-submit{width:100%;padding:12px;background:var(--gold);color:#0e0e0f;border:none;border-radius:var(--r-md);font-size:14px;font-weight:500;cursor:pointer;transition:all 0.15s;}
+.form-submit:hover{background:var(--gold2);}
+
+/* NEWSLETTER */
+.newsletter-section{background:var(--bg2);border-top:0.5px solid var(--border);border-bottom:0.5px solid var(--border);}
+.newsletter-inner{max-width:1100px;margin:0 auto;padding:56px 40px;display:flex;align-items:center;gap:64px;flex-wrap:wrap;}
+.newsletter-form{display:flex;gap:10px;flex-wrap:wrap;flex:1;min-width:260px;}
+.newsletter-input{flex:1;min-width:200px;padding:11px 16px;border:0.5px solid var(--border2);border-radius:var(--r-md);font-size:14px;background:var(--bg3);color:var(--text);outline:none;font-family:'Inter',sans-serif;}
+.newsletter-input:focus{border-color:var(--gold);}
+.newsletter-btn{background:var(--gold);color:#0e0e0f;border:none;padding:11px 22px;border-radius:var(--r-md);font-size:14px;font-weight:500;cursor:pointer;white-space:nowrap;}
+
+/* FOOTER */
+footer{border-top:0.5px solid var(--border);padding:40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;background:var(--bg);}
+footer p{font-size:13px;color:var(--text3);}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:13px;color:var(--text3);}
+.footer-links a:hover{color:var(--text);}
+
+/* PHOTO PLACEHOLDER */
+.photo-ph{background:var(--bg3);border:0.5px dashed var(--border2);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--text3);font-size:12px;}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero-wrap{flex-direction:column-reverse;padding:40px 20px;gap:28px;text-align:center;}
+  .hero h1{font-size:32px;}
+  .hero-avatar{width:160px;height:160px;font-size:40px;margin:0 auto;}
+  .hero-btns,.hero-social{justify-content:center;}
+  .stats{flex-wrap:wrap;}
+  .stat{min-width:50%;border-right:none;border-bottom:0.5px solid var(--border);}
+  .section{padding:48px 20px;}
+  .two-col,.impact-grid{grid-template-columns:1fr;}
+  .trust-bar,.booking-inner,.newsletter-inner{padding:16px 20px;}
+  footer{padding:24px 20px;flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Leslie EC</a>
+  <div class="nav-links">
+    <a href="#about" data-en="About" data-es="Sobre mí">About</a>
+    <a href="#research" data-en="Research" data-es="Investigación">Research</a>
+    <a href="#awards" data-en="Awards" data-es="Premios">Awards</a>
+    <a href="#impact" data-en="Social Impact" data-es="Impacto Social">Social Impact</a>
+    <a href="#blog" data-en="Blog" data-es="Blog">Blog</a>
+    <a href="#consulting" data-en="Consulting" data-es="Consulting">Consulting</a>
+  </div>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="#booking"><button class="btn-primary" data-en="Book a call" data-es="Agendar llamada">Book a call</button></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--bg);">
+  <div class="hero-wrap hero">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span data-en="Stanford University · Silicon Valley" data-es="Stanford University · Silicon Valley">Stanford University · Silicon Valley</span>
+      </div>
+      <p class="hero-quechua">Imaynallam — Peruana Chanka 🇵🇪</p>
+      <h1>Leslie<br><span>Espinoza</span><br>Campomanes</h1>
+      <p class="hero-mantra" data-en="Biomedical & software engineer. AI specialist in medicine & health. One of the first indigenous Peruvian women in Silicon Valley tech." data-es="Ingeniera biomédica y de software. Especialista en IA médica. Una de las primeras mujeres indígenas peruanas en Silicon Valley.">Biomedical & software engineer. AI specialist in medicine & health. One of the first indigenous Peruvian women in Silicon Valley tech.</p>
+      <p class="hero-sub" data-en="Nobel Prize collaborations · Cancer research · Stanford full scholarship · Girl Up UN Ambassador · Speaker" data-es="Colaboraciones con Premio Nobel · Investigación de cáncer · Beca completa Stanford · Embajadora Girl Up ONU · Speaker">Nobel Prize collaborations · Cancer research · Stanford full scholarship · Girl Up UN Ambassador · Speaker</p>
+      <div class="hero-btns">
+        <a href="#newsletter"><button class="btn-primary" data-en="Learn with me →" data-es="Aprende conmigo →">Learn with me →</button></a>
+        <a href="#research"><button class="btn-ghost" data-en="My research" data-es="Mi investigación">My research</button></a>
+      </div>
+      <div class="hero-social">
+        <a href="https://www.instagram.com/leslie_ayni/" target="_blank" class="social-btn" title="Instagram">ig</a>
+        <a href="https://www.linkedin.com/in/leslieespinozacampomanes/" target="_blank" class="social-btn" title="LinkedIn">in</a>
+        <a href="#" class="social-btn" title="TikTok">tt</a>
+        <a href="#" class="social-btn" title="YouTube">yt</a>
+      </div>
+    </div>
+    <div class="hero-avatar">LEC
+      <!-- Replace with: <img src="your-photo.jpg" style="width:260px;height:260px;border-radius:50%;object-fit:cover;"> -->
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="trust-label" data-en="Credentials" data-es="Credenciales">Credentials</span>
+  <span class="trust-chip gold">Stanford University</span>
+  <span class="trust-chip">Nobel Prize collaboration</span>
+  <span class="trust-chip">Cancer research</span>
+  <span class="trust-chip">Girl Up — UN</span>
+  <span class="trust-chip">Michelle Obama</span>
+  <span class="trust-chip">Malala Yousafzai</span>
+  <span class="trust-chip">12+ universities</span>
+  <span class="trust-chip gold">Anatomage Inc.</span>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">7</div><div class="stat-label" data-en="years at Stanford" data-es="años en Stanford">years at Stanford</div></div>
+  <div class="stat"><div class="stat-num">12+</div><div class="stat-label" data-en="university admissions" data-es="admisiones universitarias">university admissions</div></div>
+  <div class="stat"><div class="stat-num">Nobel</div><div class="stat-label" data-en="prize collaborations" data-es="colaboraciones">prize collaborations</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label" data-en="full scholarship" data-es="beca completa">full scholarship</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <p class="eyebrow" data-en="About me" data-es="Sobre mí">About me</p>
+  <h2 class="section-title" data-en="From the streets of Lima to the heart of Silicon Valley" data-es="De las calles de Lima al corazón de Silicon Valley">From the streets of Lima to the heart of Silicon Valley</h2>
+  <div class="two-col">
+    <div>
+      <p class="bio-p" data-en="I'm <strong>Leslie Anasu Espinoza Campomanes</strong> — biomedical & software engineer, and AI specialist in medicine. I was born on the outskirts of Lima, Peru, from <strong>Quechua-Chanka</strong> roots, an indigenous Andean culture I carry with immense pride." data-es="Soy <strong>Leslie Anasu Espinoza Campomanes</strong> — ingeniera biomédica, de software y especialista en IA médica. Nací en las afueras de Lima, Perú, de raíces <strong>Quechua-Chanka</strong>, una cultura andina indígena que llevo con enorme orgullo.">I'm <strong>Leslie Anasu Espinoza Campomanes</strong> — biomedical & software engineer, and AI specialist in medicine. I was born on the outskirts of Lima, Peru, from <strong>Quechua-Chanka</strong> roots, an indigenous Andean culture I carry with immense pride.</p>
+      <p class="bio-p" data-en="I learned English in <strong>three years</strong>. I was admitted to over <strong>12 of the world's top universities</strong>. I chose Stanford, where I completed both my undergraduate degree in Bioengineering and my Master's in Biomedical AI at Stanford Medicine — on a <strong>full scholarship</strong>." data-es="Aprendí inglés en <strong>tres años</strong>. Fui admitida a más de <strong>12 de las mejores universidades del mundo</strong>. Elegí Stanford, donde cursé mi pregrado en Bioingeniería y mi maestría en Biomedical AI en Stanford Medicine — con <strong>beca completa</strong>.">I learned English in <strong>three years</strong>. I was admitted to over <strong>12 of the world's top universities</strong>. I chose Stanford, where I completed both my undergraduate degree in Bioengineering and my Master's in Biomedical AI at Stanford Medicine — on a <strong>full scholarship</strong>.</p>
+      <div class="pull-quote">
+        <p data-en='"I am going to be the person in charge of my sister\'s future."' data-es='"Voy a ser la persona responsable del futuro de mi hermana."'>"I am going to be the person in charge of my sister's future."</p>
+        <span data-en="— Leslie, Stanford Magazine, 2020" data-es="— Leslie, Stanford Magazine, 2020">— Leslie, Stanford Magazine, 2020</span>
+      </div>
+      <p class="bio-p" data-en="Throughout my career I have collaborated with <strong>Nobel Prize winners</strong>, contributed to cancer and chronic disease research, published in journals like <strong>Current Biology</strong>, and served as a teaching assistant at Stanford. Today I am a <strong>Radiation Oncology Fellow</strong> at Stanford Medicine and work at Anatomage — the world leader in 3D medical technology." data-es="A lo largo de mi carrera he colaborado con <strong>ganadores del Premio Nobel</strong>, contribuido a la investigación del cáncer, publicado en revistas como <strong>Current Biology</strong>, y trabajado como asistenta de cátedra en Stanford. Hoy soy <strong>Fellow de Oncología de Radiación</strong> en Stanford Medicine y trabajo en Anatomage.">Throughout my career I have collaborated with <strong>Nobel Prize winners</strong>, contributed to cancer and chronic disease research, published in journals like <strong>Current Biology</strong>, and served as a teaching assistant at Stanford. Today I am a <strong>Radiation Oncology Fellow</strong> at Stanford Medicine and work at Anatomage — the world leader in 3D medical technology.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;">
+        <a href="#consulting"><button class="btn-primary" data-en="Work with me →" data-es="Trabajemos juntas →">Work with me →</button></a>
+        <a href="#impact"><button class="btn-ghost" data-en="My social impact" data-es="Mi impacto social">My social impact</button></a>
+      </div>
+    </div>
+    <div>
+      <div class="photo-ph" style="height:220px;margin-bottom:10px;" data-en="[ Your photo here ]" data-es="[ Tu foto aquí ]">[ Your photo here ]</div>
+      <div class="hcard"><div class="hcard-icon">PE</div><div><p class="hcard-title" data-en="Quechua-Chanka roots, Lima, Peru" data-es="Raíces Quechua-Chanka, Lima, Perú">Quechua-Chanka roots, Lima, Peru</p><p class="hcard-sub" data-en="First-generation university student. Grew up on the outskirts of Lima." data-es="Primera generación universitaria. Creció en las afueras de Lima.">First-generation university student. Grew up on the outskirts of Lima.</p></div></div>
+      <div class="hcard"><div class="hcard-icon">SU</div><div><p class="hcard-title" data-en="Stanford University — full scholarship" data-es="Stanford University — beca completa">Stanford University — full scholarship</p><p class="hcard-sub" data-en="BS Bioengineering + MS Biomedical AI, Stanford Medicine. Learned English in 3 years." data-es="BS Bioingeniería + MS Biomedical AI, Stanford Medicine. Aprendió inglés en 3 años.">BS Bioengineering + MS Biomedical AI, Stanford Medicine. Learned English in 3 years.</p></div></div>
+      <div class="hcard"><div class="hcard-icon">RO</div><div><p class="hcard-title" data-en="Radiation Oncology Fellow, Stanford Medicine" data-es="Fellow de Oncología, Stanford Medicine">Radiation Oncology Fellow, Stanford Medicine</p><p class="hcard-sub" data-en="Only fellow with full MS tuition + research assistantship covered. AI in cancer treatment." data-es="Única fellow con beca de investigación + matrícula cubierta. IA en tratamiento del cáncer.">Only fellow with full MS tuition + research assistantship covered. AI in cancer treatment.</p></div></div>
+    </div>
+  </div>
+  <div class="journey">
+    <p style="font-size:11px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;" data-en="The journey" data-es="El camino">The journey</p>
+    <div class="journey-row">
+      <div class="journey-step"><p class="journey-year">~2015</p><p class="journey-label" data-en="Founded ALEUP" data-es="Funda ALEUP">Founded ALEUP</p><p class="journey-sub" data-en="NGO in high school, Lima" data-es="ONG en el colegio, Lima">NGO in high school, Lima</p></div>
+      <div class="journey-step"><p class="journey-year">2019</p><p class="journey-label" data-en="Arrives at Stanford" data-es="Llega a Stanford">Arrives at Stanford</p><p class="journey-sub" data-en="Full scholarship, English in 3 yrs" data-es="Beca completa, inglés en 3 años">Full scholarship, English in 3 yrs</p></div>
+      <div class="journey-step"><p class="journey-year">2020</p><p class="journey-label" data-en="Manos a la Obra" data-es="Manos a la Obra">Manos a la Obra</p><p class="journey-sub" data-en="85 families helped in Peru" data-es="85 familias ayudadas en Perú">85 families helped in Peru</p></div>
+      <div class="journey-step"><p class="journey-year">2023</p><p class="journey-label" data-en="BS + MS Stanford" data-es="BS + MS Stanford">BS + MS Stanford</p><p class="journey-sub" data-en="Biomedical AI, Current Biology" data-es="Biomedical AI, Current Biology">Biomedical AI, Current Biology</p></div>
+      <div class="journey-step"><p class="journey-year">2024</p><p class="journey-label" data-en="Oncology Fellow" data-es="Fellow Oncología">Oncology Fellow</p><p class="journey-sub" data-en="Stanford Medicine + Anatomage" data-es="Stanford Medicine + Anatomage">Stanford Medicine + Anatomage</p></div>
+      <div class="journey-step"><p class="journey-year" data-en="Now" data-es="Hoy">Now</p><p class="journey-label" data-en="Peruvian Chanka" data-es="Peruana Chanka">Peruvian Chanka</p><p class="journey-sub" data-en="Silicon Valley → the world" data-es="Silicon Valley → el mundo">Silicon Valley → el mundo</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- RESEARCH -->
+<section class="section" id="research">
+  <p class="eyebrow" data-en="Research & publications" data-es="Investigación y publicaciones">Research & publications</p>
+  <h2 class="section-title" data-en="Science at the intersection of AI and medicine" data-es="Ciencia en la intersección de IA y medicina">Science at the intersection of AI and medicine</h2>
+  <p class="section-lead" data-en="My work focuses on AI applications in oncology, chronic disease, and expanding healthcare access to underserved Latin American communities." data-es="Mi trabajo se enfoca en IA aplicada a oncología, enfermedades crónicas y acceso a salud en comunidades latinoamericanas desatendidas.">My work focuses on AI applications in oncology, chronic disease, and expanding healthcare access to underserved Latin American communities.</p>
+  <div class="research-grid">
+    <div class="rcard"><span class="rtag" data-en="Published · Current Biology" data-es="Publicado · Current Biology">Published · Current Biology</span><h3 data-en="Distinct neural representations of hunger and thirst in neonatal mice" data-es="Representaciones neurales distintas del hambre y la sed en ratones neonatales">Distinct neural representations of hunger and thirst in neonatal mice</h3><p data-en="Co-authored research on neural mechanisms before the emergence of food- and water-seeking behaviors. Wang et al., Espinoza-Campomanes L.A." data-es="Investigación co-autorada sobre mecanismos neurales. Wang et al., Espinoza-Campomanes L.A.">Co-authored research on neural mechanisms before the emergence of food- and water-seeking behaviors. Wang et al., Espinoza-Campomanes L.A.</p></div>
+    <div class="rcard"><span class="rtag" data-en="AI in medicine" data-es="IA en medicina">AI in medicine</span><h3 data-en="Early cancer detection with deep learning" data-es="Detección temprana de cáncer con deep learning">Early cancer detection with deep learning</h3><p data-en="Deep learning models for early detection of oncological patterns in medical imaging. Stanford Radiation Oncology." data-es="Modelos de deep learning para detección temprana de patrones oncológicos en imágenes médicas. Oncología de Radiación Stanford.">Deep learning models for early detection of oncological patterns in medical imaging. Stanford Radiation Oncology.</p></div>
+    <div class="rcard"><span class="rtag" data-en="Chronic disease" data-es="Enfermedades crónicas">Chronic disease</span><h3 data-en="AI prediction of type 2 diabetes in Andean populations" data-es="Predicción IA de diabetes tipo 2 en poblaciones andinas">AI prediction of type 2 diabetes in Andean populations</h3><p data-en="Analysis of clinical and genetic data to identify risk factors in indigenous communities." data-es="Análisis de datos clínicos y genéticos para identificar factores de riesgo en comunidades indígenas.">Analysis of clinical and genetic data to identify risk factors in indigenous communities.</p></div>
+    <div class="rcard"><span class="rtag" data-en="Public health" data-es="Salud pública">Public health</span><h3 data-en="AI for healthcare access in remote Latin America" data-es="IA para acceso a salud en zonas remotas de Latinoamérica">AI for healthcare access in remote Latin America</h3><p data-en="AI-assisted diagnostic tools designed for resource-limited medical contexts across Latin America." data-es="Herramientas de diagnóstico asistido por IA para contextos con recursos médicos limitados en Latinoamérica.">AI-assisted diagnostic tools designed for resource-limited medical contexts across Latin America.</p></div>
+    <div class="rcard"><span class="rtag" data-en="Biomedical AI" data-es="Biomedical AI">Biomedical AI</span><h3 data-en="NLP on electronic medical records" data-es="NLP en registros médicos electrónicos">NLP on electronic medical records</h3><p data-en="Automatic extraction of clinically relevant information from unstructured medical notes." data-es="Extracción automática de información clínica relevante de notas médicas no estructuradas.">Automatic extraction of clinically relevant information from unstructured medical notes.</p></div>
+    <div class="rcard"><span class="rtag" data-en="Nobel collaboration" data-es="Colaboración Nobel">Nobel collaboration</span><h3 data-en="Molecular mechanisms in innovative cellular therapies" data-es="Mecanismos moleculares en terapias celulares innovadoras">Molecular mechanisms in innovative cellular therapies</h3><p data-en="Active participation in Nobel laureate-led projects with potential impact on millions of lives." data-es="Participación activa en proyectos liderados por Nobel laureates con impacto potencial en millones de vidas.">Active participation in Nobel laureate-led projects with potential impact on millions of lives.</p></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- AWARDS -->
+<section class="section" id="awards">
+  <p class="eyebrow" data-en="Awards & recognition" data-es="Premios y reconocimientos">Awards & recognition</p>
+  <h2 class="section-title" data-en="Milestones that shaped the path" data-es="Hitos que marcaron el camino">Milestones that shaped the path</h2>
+  <div class="awards-grid">
+    <div class="award-card"><div class="award-icon">🇺🇳</div><span class="award-year" data-en="Girl Up Ambassador" data-es="Embajadora Girl Up">Girl Up Ambassador</span><h3 data-en="UN Girl Up Ambassador for Peru in the US" data-es="Embajadora Girl Up por Perú ante la ONU">UN Girl Up Ambassador for Peru in the US</h3><p data-en="Represented Peru as the official ambassador of the UN's Girl Up leadership program, promoting female leadership and STEM access across Latin America." data-es="Representó a Perú como embajadora oficial del programa Girl Up de la ONU, promoviendo el liderazgo femenino y el acceso a STEM en Latinoamérica.">Represented Peru as the official ambassador of the UN's Girl Up leadership program, promoting female leadership and STEM access across Latin America.</p></div>
+    <div class="award-card"><div class="award-icon">⭐</div><span class="award-year" data-en="Historic meeting" data-es="Encuentro histórico">Historic meeting</span><h3 data-en="Recognized by Michelle Obama" data-es="Reconocida por Michelle Obama">Recognized by Michelle Obama</h3><p data-en="Had the honor of meeting Michelle Obama in the context of leadership and education initiatives for young Latinas — a moment that reaffirmed the power of representation." data-es="Tuvo el honor de conocer a Michelle Obama en el marco de iniciativas de liderazgo y educación para jóvenes latinas — un momento que reafirmó el poder de la representación.">Had the honor of meeting Michelle Obama in the context of leadership and education initiatives for young Latinas — a moment that reaffirmed the power of representation.</p></div>
+    <div class="award-card"><div class="award-icon">✌️</div><span class="award-year" data-en="Historic meeting" data-es="Encuentro histórico">Historic meeting</span><h3 data-en="Meeting with Malala Yousafzai" data-es="Encuentro con Malala Yousafzai">Meeting with Malala Yousafzai</h3><p data-en="Shared space with Nobel Peace Prize laureate Malala, whose fight for girls' education deeply resonates with Leslie's mission to open doors for indigenous communities." data-es="Compartió espacio con la Nobel de la Paz Malala, cuya lucha por la educación de las niñas resuena profundamente con la misión de Leslie.">Shared space with Nobel Peace Prize laureate Malala, whose fight for girls' education deeply resonates with Leslie's mission to open doors for indigenous communities.</p></div>
+    <div class="award-card"><div class="award-icon">🎓</div><span class="award-year" data-en="Stanford University" data-es="Stanford University">Stanford University</span><h3 data-en="Full scholarship — undergrad & master's" data-es="Beca completa — pregrado y maestría">Full scholarship — undergrad & master's</h3><p data-en="One of the few indigenous Peruvian students to receive a full scholarship for two consecutive degrees at Stanford, one of the world's most selective universities." data-es="Una de las pocas estudiantes indígenas peruanas en recibir beca completa para dos títulos consecutivos en Stanford.">One of the few indigenous Peruvian students to receive a full scholarship for two consecutive degrees at Stanford, one of the world's most selective universities.</p></div>
+    <div class="award-card"><div class="award-icon">🔬</div><span class="award-year" data-en="Research" data-es="Investigación">Research</span><h3 data-en="Nobel Prize collaboration" data-es="Colaboración con Premio Nobel">Nobel Prize collaboration</h3><p data-en="Active participation in research projects led by Nobel laureates, contributing to findings with the potential to impact millions of lives globally." data-es="Participación activa en proyectos de investigación liderados por Nobel laureates, contribuyendo a hallazgos con impacto potencial en millones de vidas.">Active participation in research projects led by Nobel laureates, contributing to findings with the potential to impact millions of lives globally.</p></div>
+    <div class="award-card"><div class="award-icon">📰</div><span class="award-year" data-en="Media" data-es="Medios">Media</span><h3 data-en="Featured in Stanford Magazine & Stanford Daily" data-es="Destacada en Stanford Magazine y Stanford Daily">Featured in Stanford Magazine & Stanford Daily</h3><p data-en="Recognized by Stanford's flagship publications for her leadership, community work, and groundbreaking trajectory from Lima to Silicon Valley." data-es="Reconocida por las publicaciones insignia de Stanford por su liderazgo, trabajo comunitario y trayectoria histórica de Lima a Silicon Valley.">Recognized by Stanford's flagship publications for her leadership, community work, and groundbreaking trajectory from Lima to Silicon Valley.</p></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- SOCIAL IMPACT -->
+<section class="section" id="impact">
+  <p class="eyebrow" data-en="Social impact" data-es="Impacto social">Social impact</p>
+  <h2 class="section-title" data-en="Science is also an act of service" data-es="La ciencia también es un acto de servicio">Science is also an act of service</h2>
+  <div class="impact-grid">
+    <div>
+      <p class="bio-p" data-en="I deeply believe the knowledge I have acquired must return to the communities that need it most. My work does not end in the lab or classroom — it lives in the streets, rural schools, and organizations fighting to change the system." data-es="Creo profundamente que el conocimiento que adquirí debe regresar a las comunidades que más lo necesitan. Mi trabajo no termina en el laboratorio — también vive en las calles, escuelas rurales y organizaciones que luchan por cambiar el sistema.">I deeply believe the knowledge I have acquired must return to the communities that need it most. My work does not end in the lab or classroom — it lives in the streets, rural schools, and organizations fighting to change the system.</p>
+      <p class="bio-p" data-en="As <strong>Girl Up Ambassador for Peru</strong> at the UN, I worked to empower girls and young Latinas in access to education, health, and technology. I believe the next biomedical engineer can come from any Andean community in Peru, if given the opportunity." data-es="Como <strong>Embajadora Girl Up por Perú</strong> ante la ONU, trabajé para empoderar a niñas y jóvenes latinas en acceso a educación, salud y tecnología. Creo que la próxima ingeniera biomédica puede venir de cualquier comunidad andina, si se le abre la puerta.">As <strong>Girl Up Ambassador for Peru</strong> at the UN, I worked to empower girls and young Latinas in access to education, health, and technology. I believe the next biomedical engineer can come from any Andean community in Peru, if given the opportunity.</p>
+      <div class="photo-ph" style="height:180px;margin-top:20px;" data-en="[ Impact photo here ]" data-es="[ Foto de impacto aquí ]">[ Impact photo here ]</div>
+    </div>
+    <div>
+      <div class="icard"><div class="icard-icon">🌎</div><div><h4 data-en="ALEUP — NGO across LATAM" data-es="ALEUP — ONG en toda LATAM">ALEUP — NGO across LATAM</h4><p data-en="Founded in high school. Connects students across Peru and the world regardless of geography or background. Co-founder." data-es="Fundada en el colegio. Conecta estudiantes en Perú y el mundo sin importar geografía o recursos. Co-fundadora.">Founded in high school. Connects students across Peru and the world regardless of geography or background. Co-founder.</p></div></div>
+      <div class="icard"><div class="icard-icon">🇺🇳</div><div><h4 data-en="Girl Up — United Nations" data-es="Girl Up — Naciones Unidas">Girl Up — United Nations</h4><p data-en="Official ambassador of Peru. Female leadership, education and health for Latin American girls." data-es="Embajadora oficial de Perú. Liderazgo femenino, educación y salud para niñas latinoamericanas.">Official ambassador of Peru. Female leadership, education and health for Latin American girls.</p></div></div>
+      <div class="icard"><div class="icard-icon">🌱</div><div><h4 data-en="STEM for indigenous communities" data-es="STEM para comunidades indígenas">STEM for indigenous communities</h4><p data-en="Free workshops and mentorship for Andean students wanting to enter science and technology careers." data-es="Talleres y mentoría gratuita para estudiantes de comunidades andinas que quieren entrar a carreras STEM.">Free workshops and mentorship for Andean students wanting to enter science and technology careers.</p></div></div>
+      <div class="icard"><div class="icard-icon">💊</div><div><h4 data-en="Pacific Free Clinic — Stanford Hospital" data-es="Pacific Free Clinic — Stanford Hospital">Pacific Free Clinic — Stanford Hospital</h4><p data-en="Health navigator and Spanish medical interpreter providing culturally appropriate care for underserved patients." data-es="Navegadora de salud e intérprete médica en español, brindando atención culturalmente apropiada para pacientes desatendidos.">Health navigator and Spanish medical interpreter providing culturally appropriate care for underserved patients.</p></div></div>
+      <div class="icard"><div class="icard-icon">❤️</div><div><h4 data-en="Manos a la Obra — COVID relief" data-es="Manos a la Obra — Ayuda COVID">Manos a la Obra — COVID relief</h4><p data-en="Led 25 volunteers to deliver care packages to 85+ families across Peru from Stanford campus during the pandemic." data-es="Lideró 25 voluntarios para entregar kits de ayuda a más de 85 familias en Perú desde el campus de Stanford durante la pandemia.">Led 25 volunteers to deliver care packages to 85+ families across Peru from Stanford campus during the pandemic.</p></div></div>
+    </div>
+  </div>
+  <div class="empowerment-banner">
+    <h3 data-en="For every girl who was told she didn't belong." data-es="Por cada niña a quien le dijeron que no pertenecía.">For every girl who was told she didn't belong.</h3>
+    <p data-en="I am proof that indigenous, first-generation, Latin American women belong in Silicon Valley, in research labs, in operating rooms, and at the forefront of medical technology. This is my mission: to open every door I walked through — wider." data-es="Soy prueba de que las mujeres indígenas, de primera generación, latinoamericanas pertenecen en Silicon Valley, en laboratorios de investigación, en quirófanos y a la vanguardia de la tecnología médica. Mi misión: abrir cada puerta por la que pasé — más ampliamente.">I am proof that indigenous, first-generation, Latin American women belong in Silicon Valley, in research labs, in operating rooms, and at the forefront of medical technology. This is my mission: to open every door I walked through — wider.</p>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- BLOG -->
+<section class="section" id="blog">
+  <p class="eyebrow" data-en="Blog & content" data-es="Blog y contenido">Blog & content</p>
+  <h2 class="section-title" data-en="Learn with me from Silicon Valley" data-es="Aprende conmigo desde Silicon Valley">Learn with me from Silicon Valley</h2>
+  <p class="section-lead" data-en="Medical AI, STEM careers, college application tips, and life as an indigenous Peruvian in Silicon Valley — in English and Spanish." data-es="IA médica, carreras STEM, consejos para aplicar a universidades, y vida como peruana indígena en Silicon Valley — en inglés y español.">Medical AI, STEM careers, college application tips, and life as an indigenous Peruvian in Silicon Valley — in English and Spanish.</p>
+  <div class="blog-grid">
+    <div class="blog-card"><div class="blog-img" data-en="[ Blog photo ]" data-es="[ Foto del blog ]">[ Blog photo ]</div><div class="blog-body"><span class="blog-tag" data-en="Medical AI" data-es="IA Médica">Medical AI</span><h3 data-en="How AI is detecting cancer before doctors can" data-es="Cómo la IA detecta el cáncer antes que los médicos">How AI is detecting cancer before doctors can</h3><p data-en="My actual research explained simply — the future of oncology is already here." data-es="Mi investigación real explicada de forma simple — el futuro de la oncología ya está aquí.">My actual research explained simply — the future of oncology is already here.</p><p class="blog-meta" data-en="5 min read · Medical AI" data-es="5 min · IA Médica">5 min read · Medical AI</p></div></div>
+    <div class="blog-card"><div class="blog-img" data-en="[ Blog photo ]" data-es="[ Foto del blog ]">[ Blog photo ]</div><div class="blog-body"><span class="blog-tag" data-en="College tips" data-es="Aplicaciones universitarias">College tips</span><h3 data-en="How I got into 12+ top universities from Peru" data-es="Cómo entré a más de 12 universidades top desde Perú">How I got into 12+ top universities from Peru</h3><p data-en="Everything I did, what worked, what didn't, and what I would do differently." data-es="Todo lo que hice, lo que funcionó, lo que no, y lo que haría diferente.">Everything I did, what worked, what didn't, and what I would do differently.</p><p class="blog-meta" data-en="8 min read · Career tips" data-es="8 min · Consejos de carrera">8 min read · Career tips</p></div></div>
+    <div class="blog-card"><div class="blog-img" data-en="[ Blog photo ]" data-es="[ Foto del blog ]">[ Blog photo ]</div><div class="blog-body"><span class="blog-tag" data-en="STEM" data-es="STEM">STEM</span><h3 data-en="What is Biomedical AI? The career nobody is telling you about" data-es="¿Qué es Biomedical AI? La carrera que nadie te está contando">What is Biomedical AI? The career nobody is telling you about</h3><p data-en="The field that will define the next 20 years of medicine — and how to get into it." data-es="El campo que definirá los próximos 20 años de la medicina — y cómo entrar.">The field that will define the next 20 years of medicine — and how to get into it.</p><p class="blog-meta" data-en="6 min read · STEM" data-es="6 min · STEM">6 min read · STEM</p></div></div>
+  </div>
+  <div style="margin-top:24px;text-align:center;">
+    <a href="https://www.instagram.com/leslie_ayni/" target="_blank"><button class="btn-ghost" data-en="Follow @leslie_ayni for daily tips →" data-es="Sigue @leslie_ayni para consejos diarios →">Follow @leslie_ayni for daily tips →</button></a>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- MEDIA -->
+<section class="section" id="media">
+  <p class="eyebrow" data-en="In the media" data-es="En los medios">In the media</p>
+  <h2 class="section-title" data-en="As seen in" data-es="Destacada en">As seen in</h2>
+  <div class="media-grid">
+    <div class="media-card"><p class="media-source">Stanford Magazine</p><p class="media-headline" data-en="Sheltering at Stanford — first-gen student from Lima stays to help her community" data-es="Refugio en Stanford — estudiante de primera generación de Lima se queda para ayudar a su comunidad">"Sheltering at Stanford" — first-gen student from Lima stays to help her community</p><p class="media-date">May 2020</p></div>
+    <div class="media-card"><p class="media-source">Stanford Daily</p><p class="media-headline" data-en="Peruvian student starts fundraiser to help home country from afar" data-es="Estudiante peruana inicia campaña para ayudar a su país desde lejos">Peruvian student starts fundraiser to help home country from afar</p><p class="media-date">May 2020</p></div>
+    <div class="media-card"><p class="media-source">Stanford Medicine</p><p class="media-headline" data-en="Department of Biomedical Data Science — Graduate Student Profile" data-es="Departamento de Ciencia de Datos Biomédicos — Perfil de Posgrado">Department of Biomedical Data Science — Graduate Student Profile</p><p class="media-date">2023–2024</p></div>
+    <div class="media-card"><p class="media-source">TechSuyo 2024</p><p class="media-headline" data-en="Speaker at the annual Peruvian tech summit in Silicon Valley" data-es="Speaker en la cumbre anual de tecnología peruana en Silicon Valley">Speaker at the annual Peruvian tech summit in Silicon Valley</p><p class="media-date">September 2024</p></div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CONSULTING -->
+<section class="section" id="consulting">
+  <p class="eyebrow" data-en="Consulting & services" data-es="Consulting y servicios">Consulting & services</p>
+  <h2 class="section-title" data-en="Let's work together" data-es="Trabajemos juntas">Let's work together</h2>
+  <p class="section-lead" data-en="Whether you're a student, a healthtech startup, or looking for a speaker — I'm here." data-es="Ya seas estudiante, startup de healthtech, o busques un speaker — estoy aquí.">Whether you're a student, a healthtech startup, or looking for a speaker — I'm here.</p>
+  <div class="consulting-grid">
+    <div class="ccard"><h3 data-en="1:1 Mentorship" data-es="Mentoría 1:1">1:1 Mentorship</h3><p data-en="For Latin American students aiming for top universities or a career in tech and STEM." data-es="Para estudiantes latinoamericanos que quieren llegar a universidades top o entrar a tech y STEM.">For Latin American students aiming for top universities or a career in tech and STEM.</p><div class="price">$80<span style="font-size:14px;color:var(--text2)">/hr</span></div><ul><li data-en="University application review" data-es="Revisión de aplicaciones universitarias">University application review</li><li data-en="STEM career guidance" data-es="Orientación de carrera en STEM">STEM career guidance</li><li data-en="Inside advice from Stanford" data-es="Consejos desde adentro de Stanford">Inside advice from Stanford</li></ul><a href="#booking"><button class="book-btn" data-en="Book a session" data-es="Agendar sesión">Book a session</button></a></div>
+    <div class="ccard featured"><span class="feat-badge" data-en="Most popular" data-es="Más popular">Most popular</span><h3 data-en="Healthtech consulting" data-es="Healthtech consulting">Healthtech consulting</h3><p data-en="For startups and teams building digital health and medical AI products." data-es="Para startups y equipos que construyen productos en salud digital e IA médica.">For startups and teams building digital health and medical AI products.</p><div class="price">$200<span style="font-size:14px;color:var(--text2)">/hr</span></div><ul><li data-en="Technical product review" data-es="Revisión técnica de producto">Technical product review</li><li data-en="Medical AI strategy" data-es="Estrategia de IA médica">Medical AI strategy</li><li data-en="Silicon Valley connections" data-es="Conexiones en Silicon Valley">Silicon Valley connections</li><li data-en="Regulatory & clinical guidance" data-es="Guía regulatoria y clínica">Regulatory & clinical guidance</li></ul><a href="#booking"><button class="book-btn primary" data-en="Book a call" data-es="Agendar llamada">Book a call</button></a></div>
+    <div class="ccard"><h3 data-en="Speaking" data-es="Speaker">Speaking</h3><p data-en="Conferences, panels, podcasts on STEM, diversity, and medical AI. Also available for pro-bono with indigenous communities." data-es="Conferencias, paneles, podcasts sobre STEM, diversidad e IA médica. También disponible pro-bono para comunidades indígenas.">Conferences, panels, podcasts on STEM, diversity, and medical AI. Also available for pro-bono with indigenous communities.</p><div class="price" data-en="Inquire" data-es="Consultar">Inquire</div><ul><li data-en="Keynotes in English or Spanish" data-es="Keynotes en inglés o español">Keynotes in English or Spanish</li><li data-en="Diversity in tech panels" data-es="Paneles de diversidad en tech">Diversity in tech panels</li><li data-en="University workshops" data-es="Talleres universitarios">University workshops</li></ul><a href="#booking"><button class="book-btn" data-en="Invite me to speak" data-es="Invitarme a hablar">Invite me to speak</button></a></div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<div class="booking-section" id="booking">
+  <div class="booking-inner">
+    <div class="booking-text">
+      <p class="eyebrow" data-en="Book a session" data-es="Agendar sesión">Book a session</p>
+      <h2 class="section-title" style="margin-bottom:10px;" data-en="Schedule your appointment" data-es="Agenda tu cita">Schedule your appointment</h2>
+      <p style="font-size:14px;color:var(--text2);line-height:1.7;" data-en="Choose a service, pick a time that works for you, and let's get started. I respond within 24 hours." data-es="Elige un servicio, elige un horario que te funcione, y empecemos. Respondo en menos de 24 horas.">Choose a service, pick a time that works for you, and let's get started. I respond within 24 hours.</p>
+    </div>
+    <div class="booking-form">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Your name" data-en-placeholder="Your name" data-es-placeholder="Tu nombre">
+        <input class="form-input" type="email" placeholder="Your email" data-en-placeholder="Your email" data-es-placeholder="Tu email">
+      </div>
+      <select class="form-select">
+        <option data-en="Select a service" data-es="Selecciona un servicio">Select a service</option>
+        <option data-en="1:1 Mentorship — $80/hr" data-es="Mentoría 1:1 — $80/hr">1:1 Mentorship — $80/hr</option>
+        <option data-en="Healthtech Consulting — $200/hr" data-es="Healthtech Consulting — $200/hr">Healthtech Consulting — $200/hr</option>
+        <option data-en="Speaking inquiry" data-es="Consulta para speaker">Speaking inquiry</option>
+        <option data-en="Free community mentorship" data-es="Mentoría gratuita comunitaria">Free community mentorship</option>
+      </select>
+      <input class="form-input" type="text" placeholder="Preferred date & time" data-en-placeholder="Preferred date & time" data-es-placeholder="Fecha y hora preferida" style="width:100%;margin-bottom:10px;">
+      <input class="form-input" type="text" placeholder="Brief message (optional)" data-en-placeholder="Brief message (optional)" data-es-placeholder="Mensaje breve (opcional)" style="width:100%;margin-bottom:10px;">
+      <button class="form-submit" data-en="Send booking request →" data-es="Enviar solicitud →">Send booking request →</button>
+      <p style="font-size:12px;color:var(--text3);margin-top:8px;" data-en="I'll confirm your appointment within 24 hours." data-es="Confirmaré tu cita en menos de 24 horas.">I'll confirm your appointment within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-section">
+  <div class="newsletter-inner">
+    <div style="flex:1;min-width:260px;">
+      <p class="eyebrow" data-en="Newsletter" data-es="Newsletter">Newsletter</p>
+      <h2 class="section-title" style="font-size:22px;margin-bottom:8px;" data-en="Learn with me" data-es="Aprende conmigo">Learn with me</h2>
+      <p style="font-size:14px;color:var(--text2);line-height:1.7;" data-en="Weekly updates on medicine, health and STEM — from Silicon Valley, in English and Spanish." data-es="Novedades semanales en medicina, salud y STEM — desde Silicon Valley, en inglés y español.">Weekly updates on medicine, health and STEM — from Silicon Valley, in English and Spanish.</p>
+    </div>
+    <div class="newsletter-form">
+      <input class="newsletter-input" type="email" placeholder="your@email.com">
+      <button class="newsletter-btn" data-en="Subscribe →" data-es="Suscribirme →">Subscribe →</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p style="color:var(--gold);font-weight:500;margin-bottom:4px;">Leslie Espinoza Campomanes</p>
+    <p data-en="© 2025 · Peruvian Chanka in Silicon Valley 🇵🇪" data-es="© 2025 · Peruana Chanka en Silicon Valley 🇵🇪">© 2025 · Peruvian Chanka in Silicon Valley 🇵🇪</p>
+  </div>
+  <div class="footer-links">
+    <a href="#about" data-en="About" data-es="Sobre mí">About</a>
+    <a href="#research" data-en="Research" data-es="Investigación">Research</a>
+    <a href="#awards" data-en="Awards" data-es="Premios">Awards</a>
+    <a href="#impact" data-en="Social Impact" data-es="Impacto Social">Social Impact</a>
+    <a href="#blog" data-en="Blog" data-es="Blog">Blog</a>
+    <a href="#consulting" data-en="Consulting" data-es="Consulting">Consulting</a>
+  </div>
+</footer>
+
+<script>
+function setLang(lang){
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b=>{ if(b.textContent===lang.toUpperCase()) b.classList.add('active'); });
+  document.querySelectorAll('[data-en][data-es]').forEach(el=>{
+    const val = el.getAttribute('data-'+lang);
+    if(val) el.innerHTML = val;
+  });
+  document.querySelectorAll('[data-en-placeholder]').forEach(el=>{
+    el.placeholder = el.getAttribute('data-'+lang+'-placeholder')||el.placeholder;
+  });
+}
+</script>
+</body>
+</html>
